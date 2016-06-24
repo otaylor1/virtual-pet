@@ -11,7 +11,7 @@ namespace VirtualPet
         static void Main(string[] args)
         {
             Console.WriteLine("You have just adopted a new Sloth!");
-            Console.Write("What is its name? ");
+            Console.Write("What is its' name? ");
             string name = Console.ReadLine();
             Console.WriteLine(name + " is happy to meet you!");
             Console.ReadKey();
