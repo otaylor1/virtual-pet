@@ -18,12 +18,12 @@ namespace VirtualPet
             Console.WriteLine(MySloth.Name + "'s Statistics are:");
             MySloth.DisplayStatistics();
             Console.WriteLine("Be sure not to let " + MySloth.Name + "'s statistics get above 20 or below 0");
-
             Console.ReadKey();
             Console.Clear();
 
             int consequenceResult = 0;
             bool continueLoop = true;
+
             while (continueLoop)
             {
                 Console.WriteLine("Activities");
@@ -45,14 +45,11 @@ namespace VirtualPet
                     MySloth.Food++;
                     MySloth.Water--;
                     MySloth.Energy++;
-
                     MySloth.DisplayStatistics();
                     Console.ReadKey();
                     Console.Clear();
 
-
                     consequenceResult = MySloth.Consequences();
-
                 }
 
                 else if (response == 2)
@@ -62,7 +59,6 @@ namespace VirtualPet
                     MySloth.Water++;
                     MySloth.Energy++;
                     MySloth.Boredom--;
-
                     MySloth.DisplayStatistics();
                     Console.ReadKey();
                     Console.Clear();
@@ -78,7 +74,6 @@ namespace VirtualPet
                     MySloth.Water -= 3;
                     MySloth.Energy--;
                     MySloth.Boredom += 2;
-
                     MySloth.DisplayStatistics();
                     Console.ReadKey();
                     Console.Clear();
@@ -94,13 +89,12 @@ namespace VirtualPet
                     MySloth.Water -= 2;
                     MySloth.Energy--;
                     MySloth.Boredom++;
-
-
                     consequenceResult = MySloth.Consequences();
                     Console.ReadKey();
                     Console.Clear();
-                }
 
+                    consequenceResult = MySloth.Consequences();
+                }
 
                 else
                 {
@@ -111,7 +105,6 @@ namespace VirtualPet
                 {
                     continueLoop = false;
                 }
-
             }
         }
     }

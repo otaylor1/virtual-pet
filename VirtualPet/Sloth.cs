@@ -118,7 +118,5 @@ namespace VirtualPet
             }
             return returnValue;
         }
-
-
     }
 }
