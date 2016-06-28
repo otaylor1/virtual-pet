@@ -40,7 +40,7 @@ namespace VirtualPet
                 if (response == 1)
                 {
                     Console.WriteLine("\nYou fed {0} \n", MySloth.Name);
-                    
+
                     //Statistics
                     MySloth.Food++;
                     MySloth.Water--;
@@ -55,7 +55,7 @@ namespace VirtualPet
                 else if (response == 2)
                 {
                     Console.WriteLine("\nYou gave {0} water  \n", MySloth.Name);
-                    
+
                     MySloth.Water++;
                     MySloth.Energy++;
                     MySloth.Boredom--;
@@ -67,9 +67,9 @@ namespace VirtualPet
                 }
 
                 else if (response == 3)
-                { 
+                {
                     Console.WriteLine("\nYou played with {0} \n", MySloth.Name);
-                  
+
                     MySloth.Food -= 2;
                     MySloth.Water -= 3;
                     MySloth.Energy--;
@@ -82,14 +82,14 @@ namespace VirtualPet
                 }
 
                 else if (response == 4)
-                {                   
-                    Console.WriteLine("\nYou walked \n",  MySloth.Name);
-                   
+                {
+                    Console.WriteLine("\nYou walked {0}\n", MySloth.Name);
+
                     MySloth.Food--;
                     MySloth.Water -= 2;
                     MySloth.Energy--;
                     MySloth.Boredom++;
-                    consequenceResult = MySloth.Consequences();
+                    MySloth.DisplayStatistics();
                     Console.ReadKey();
                     Console.Clear();
 
